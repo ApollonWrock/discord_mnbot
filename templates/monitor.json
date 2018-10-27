@@ -1,0 +1,51 @@
+{
+  "embed": 
+    
+    
+    {
+    "color": 3360433,
+        "fields": [
+          
+       {
+        "name": "XAP",
+        "value": "**BlockHeight:** <block>      \n**MN rew.:**       164 XAP\n**Stak rew.:**       41 XAP",
+        "inline": true
+      },
+           {
+        "name": "| Masternode",
+        "value": "| **Colleteral:**   25000 XAP   \n| **Stats:**            [Link](https://masternodes.online/currencies/XAP/)\n| **Explorer:**      [Link](https://xap2.ccore.online/)",
+        "inline": true
+      },
+           {
+        "name": "| **Staking**",
+        "value": "| **Minimum:**                       0.1 XAP\n| **Time to mature:**            1h\n",
+        "inline": true
+      },
+        
+       {
+        "name": "----------------------",
+        "value": "**Volume:** <volume>\n----------------------",
+        "inline": false
+      },
+       
+      {
+        "name": "Cryptobridge",
+        "value": "**Vol:** <cbvolume> \n**Buy:** <cbbuy> \n**Sell:** <cbsell> \n\n           [Link](https://wallet.crypto-bridge.org/market/BRIDGE.XAP_BRIDGE.BTC)",
+        "inline": true
+      },
+
+      {
+        "name": "| CoinExchange",
+        "value": "| **Vol:** <cevolume> \n| **Buy:** <cebuy> \n| **Sell:** <cesell> \n\n          [Link](https://www.coinexchange.io/market/XAP/BTC)",
+        "inline": true
+      },
+       {
+        "name": "| Graviex",
+        "value": "| **Vol:** <gxvolume> \n| **Buy:** <gxbuy> \n| **Sell:** <gxsell> \n\n   [Link](https://graviex.net/markets/xapbtc)",
+        "inline": true
+      }
+          
+    ]
+  }
+                
+}

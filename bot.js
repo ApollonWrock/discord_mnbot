@@ -89,7 +89,7 @@ setInterval(function() {
 								 varlist.push({name: 'volume',value: volume});
 								// volume=parseFloat(cbvolume)+parseFloat(cevolume)+parseFloat(gxvolume)
 							// 
-								monitormsg=fs.readFileSync('monitor.json', 'utf8');
+								monitormsg=fs.readFileSync('./templates/monitor.json', 'utf8');
 				    		// var temp_stak=fs.readFileSync('blockheight.json', 'utf8');
 								// console.log(monitormsg);
 
@@ -181,27 +181,24 @@ DiscordBot.on('message', msg => {
 /////////////////////////////////////////////////////////////////////////////////////////
  		switch(msg.content) {
    
-            case '!testwelcome':
-				  msg.author.send(JSON.parse(fs.readFileSync('welcomeMessage.json', 'utf8')));
-            	break;
 
             case '!ping':
            	 	msg.channel.send('pong');
 				break;
 
 			case "!help":
-				// msg.channel.send(JSON.parse(fs.readFileSync('help.json', 'utf8')));
+				// msg.channel.send(JSON.parse(fs.readFileSync('.templates/help.json', 'utf8')));
 			break;
 
 			case "!upgrade":
-				// msg.channel.send(JSON.parse(fs.readFileSync('upgrade_old.json', 'utf8')));
+				// msg.channel.send(JSON.parse(fs.readFileSync('.templates/upgrade_old.json', 'utf8')));
 			break;
 			case "!swap":
-				// msg.channel.send(JSON.parse(fs.readFileSync('swap.json', 'utf8')));
+				// msg.channel.send(JSON.parse(fs.readFileSync('.templates/swap.json', 'utf8')));
 			break;
 
 			case "!boot":
-				// msg.channel.send(JSON.parse(fs.readFileSync('faq.json', 'utf8')));
+				// msg.channel.send(JSON.parse(fs.readFileSync('.templates/faq.json', 'utf8')));
 			break;
 
 
@@ -215,7 +212,7 @@ DiscordBot.on('message', msg => {
 
 				    	setTimeout(function() {
 				    	
-				    		var temp_stak=fs.readFileSync('blockheight.json', 'utf8');
+				    		var temp_stak=fs.readFileSync('.templates/blockheight.json', 'utf8');
 
 				    		//sends blockheight.json messages but replaces <block_entry>
 							msg.channel.send(JSON.parse(temp_stak.replace(/<block_height>/g, stdout.match(/\d+/))));

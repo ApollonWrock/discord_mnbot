@@ -1,0 +1,30 @@
+{
+   "embed": {
+    "title": "Current Block Height",
+    "description": ":question:",
+    "url": "https://discordapp.com",
+    "color": 13632027,
+    "footer": {
+      "icon_url": "http://apolloncoin.io/images/logo_circle.png",
+      "text": "Copyright © 2018 Apollon | XAP / All rights reserved."
+    },
+    "thumbnail": {
+      "url": "http://apolloncoin.io/images/logo_circle.png"
+    },
+      "image": {
+      "url": "https://i.imgur.com/OBqB9M3.png"
+    },
+    "author": {
+      "name": "Apollo_bot",
+      "url": "http://apolloncoin.io",
+      "icon_url": "http://apolloncoin.io/images/logo_circle.png"
+    },
+    "fields": [
+         {
+        "name": "The current Block Height is **<block_height>**",
+        "value": "80% MN / 20% Staking"
+      }
+ 
+    ]
+  }
+}
