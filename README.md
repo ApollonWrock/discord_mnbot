@@ -14,7 +14,7 @@ You need
 1. A Discord bot token: https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token
 2. Let the discord bot join your server
 3. Create a #bot and a #monitor channel and give the bot the rights to post and delete messages.
-4. Binary name to connect to your wallet and it either is in the same folder or global callable (e.g. Apollon-cli)
+4. Binary name of your wallet-cli (e.g. Apollon-cli)
 5. An URL to get a json list of available exchanges (e.g. https://xap.overemo.com/ext/getexchanges)
 6. Edit the messages send in templates/
 
