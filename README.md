@@ -1,4 +1,4 @@
-NOTE: This is a preliminary release. The code has not be modfied to supprot a wide range of different coinsand explorer. Expect to do modifications on your own and structure changes until the official release.
+NOTE: This is a preliminary release. The code has not be modfied to support a wide range of different coins and api calls. Expect to do modifications and structure changes until the official release.
 
 
 # Install
