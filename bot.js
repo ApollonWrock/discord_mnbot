@@ -108,8 +108,8 @@ setInterval(function() {
 										
 
 				    	setTimeout(function() {
-				    	
-								DiscordBot.channels.find("name", "monitor").send(JSON.parse(monitormsg.replace(/<block>/g, stdout.match(/\d+/))));
+				    		
+								DiscordBot.channels.find(x => x.name === "monitor").send(JSON.parse(monitormsg.replace(/<block>/g, stdout.match(/\d+/))));
 						}, 1000 );
 
 						});
