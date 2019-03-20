@@ -94,7 +94,7 @@ getDatablockofMNbyPubkey: function(pubkey,callback){
       
    })
 
-}
+},
 
 
 getDatablockofMNbyIP: function(ip,callback){
