@@ -249,10 +249,12 @@ DiscordBot.on('message', msg => {
 										    	datablock=0;
 										    	helpers.getDatablockofMNbyPubkey(result[0],function(datablockraw){
 
-										    		console.log("got datablock");
-										    		datablock=JSON.parse(datablockraw);
+										    		console.log("got datablock raw"+datablockraw);
+										    		datablock=JSON.parse(datablockraw)[0];
+
+										    		console.log("got datablock parssed:"+datablock);
 											    	if(datablock!=0){
-											    		msg.channel.send("```IP:"+datablock.ip+"\nStatus:"   +datablock.status + "\nPublic-Key:"+ datablock.addr +  "\nVersion:"+datablock.version+"```\n Explorer:" +" https://xap2.ccore.online/address/"+datablock.addr);
+											    		msg.channel.send("```Rank:"+datablock.ip+"\nStatus:"   +datablock.status + "\nPublic-Key:"+ datablock.addr +  "\nVersion:"+datablock.version+"```\n Explorer:" +" https://xap2.ccore.online/address/"+datablock.addr);
 											    	}
 											    	else{
 											    		 msg.channel.send("```Couldn't find Masternode in Apollon Network.```");
