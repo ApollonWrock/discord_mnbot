@@ -73,7 +73,7 @@ getDatablockofMNbyPubkey: function(pubkey,callback){
 
         console.log("try to get an object");
 
-    exec('bash user_modules/getMnbyPub.sh',{
+    exec('bash user_modules/getMnbyPub.sh '+pubkey,{
     maxBuffer: 9000 * 1024 //quick fix
     }, function waitofos(error, stdout, stderr){
 
