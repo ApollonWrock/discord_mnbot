@@ -92,36 +92,8 @@ getDatablockofMNbyPubkey: function(pubkey,callback){
 
      callback(0)
       
-   })
-
-},
-
-
-getDatablockofMNbyIP: function(ip,callback){
-
-		exec(auth.cli+' masternode list > mnlist.txt' ,{
-    maxBuffer: 9000 * 1024 //quick fix
-    }, function waitofos(error, stdout, stderr){
-
-		// mnlist=stdout.toString().split(",");
-	   var obj=JSON.parse(fs.readFileSync("mnlist.txt", 'utf8')); // write it back 
-// '
-	     // console.log(obj.length)
-
-	    for (var i = obj.length - 1; i >= 0; i--) {
-
-	    	if(obj[i].ip.includes(ip)){
-	    		  // console.log("found MN in Apollon network");
-	    		 callback( obj[i]);
-	 			return;
-	    	}
-	    }
-
-	   callback(0)
-	    
-	 })
+   });
 
 }
-
 
 };
