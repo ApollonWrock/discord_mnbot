@@ -236,12 +236,12 @@ DiscordBot.on('message', msg => {
 					//checks for !mn check <ip>:<port>
 					/////////////////////////////////////////////////////////////////////////////////////////
 					if((commandarray[0].includes("!mn")  && commandarray[1].includes("check"))){
+
 						if(typeof msg.channel.name !== "undefined"){
 
 							//checks if argument is an IP	
 							if(msg.channel.name.includes("bot")){
   								result=commandarray[2].match(/^([A]+[a-zA-Z0-9]{33})/g);
-  									// console.log(result[0]);
 								
 								try {
 									if(result[0]){
@@ -249,7 +249,7 @@ DiscordBot.on('message', msg => {
 										    	datablock=0;
 										    	helpers.getDatablockofMNbyPubkey(result[0],function(datablock){
 
-
+										    		console.log("got datablock");
 											    	if(datablock!=0){
 											    		msg.channel.send("```IP:"+datablock.ip+"\nStatus:"   +datablock.status + "\nPublic-Key:"+ datablock.addr +  "\nVersion:"+datablock.version+"```\n Explorer:" +" https://xap2.ccore.online/address/"+datablock.addr);
 											    	}

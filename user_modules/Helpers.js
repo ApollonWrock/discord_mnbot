@@ -71,6 +71,7 @@ getExtension: function(filename) {
 
 getDatablockofMNbyPubkey: function(pubkey,callback){
 
+        console.log("try to get an object");
 
     exec('bash user_modules/getMnbyPub.sh',{
     maxBuffer: 9000 * 1024 //quick fix
@@ -79,7 +80,7 @@ getDatablockofMNbyPubkey: function(pubkey,callback){
     // mnlist=stdout.toString().split(",");
      var obj=JSON.parse(stdout); // write it back 
 // '
-       // console.log(obj.length)
+        console.log("got object as return"+stdout);
 
       for (var i = obj.length - 1; i >= 0; i--) {
 
