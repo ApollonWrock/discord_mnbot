@@ -247,9 +247,10 @@ DiscordBot.on('message', msg => {
 									if(result[0]){
 
 										    	datablock=0;
-										    	helpers.getDatablockofMNbyPubkey(result[0],function(datablock){
+										    	helpers.getDatablockofMNbyPubkey(result[0],function(datablockraw){
 
 										    		console.log("got datablock");
+										    		datablock=JSON.parse(datablockraw);
 											    	if(datablock!=0){
 											    		msg.channel.send("```IP:"+datablock.ip+"\nStatus:"   +datablock.status + "\nPublic-Key:"+ datablock.addr +  "\nVersion:"+datablock.version+"```\n Explorer:" +" https://xap2.ccore.online/address/"+datablock.addr);
 											    	}
