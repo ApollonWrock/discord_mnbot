@@ -242,7 +242,7 @@ DiscordBot.on('message', msg => {
 							//checks if argument is an IP	
 							if(msg.channel.name.includes("bot")){
   								result=commandarray[2].match(/^([A]+[a-zA-Z0-9]{33})/g);
-								
+								console.log(result);
 								try {
 									if(result[0]){
 
