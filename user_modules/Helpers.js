@@ -78,20 +78,21 @@ getDatablockofMNbyPubkey: function(pubkey,callback){
     }, function waitofos(error, stdout, stderr){
 
     // mnlist=stdout.toString().split(",");
-     var obj=JSON.parse(stdout); // write it back 
+     // var obj=JSON.parse(stdout); // write it back 
 // '
         console.log("got object as return"+stdout);
 
-      for (var i = obj.length - 1; i >= 0; i--) {
+        callback(stdout);
+      // for (var i = obj.length - 1; i >= 0; i--) {
 
-        if(obj[i].ip.includes(ip)){
-            // console.log("found MN in Apollon network");
-           callback( obj[i]);
-        return;
-        }
-      }
+      //   if(obj[i].ip.includes(ip)){
+      //       // console.log("found MN in Apollon network");
+      //      callback( obj[i]);
+      //   return;
+      //   }
+      // }
 
-     callback(0)
+     // callback(0)
       
    });
 
