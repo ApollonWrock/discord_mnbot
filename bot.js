@@ -240,14 +240,14 @@ DiscordBot.on('message', msg => {
 
 							//checks if argument is an IP	
 							if(msg.channel.name.includes("bot")){
-  								result=commandarray[2].match(/^(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}:\d{1,6})/g);
+  								result=commandarray[2].match(/^([A]+[a-zA-Z0-9]{33})/g);
   									// console.log(result[0]);
 								
 								try {
 									if(result[0]){
 
 										    	datablock=0;
-										    	helpers.getDatablockofMNbyIP(result[0],function(datablock){
+										    	helpers.getDatablockofMNbyPubkey(result[0],function(datablock){
 
 
 											    	if(datablock!=0){
@@ -262,7 +262,7 @@ DiscordBot.on('message', msg => {
 										    	
 											
 									}else{
-										msg.channel.send("```Can't recognize " + result[0]+" as <ip>:<port>```");
+										msg.channel.send("```Can't recognize " + result[0]+" as a Masternode Address```");
 										return;
 
 									}
