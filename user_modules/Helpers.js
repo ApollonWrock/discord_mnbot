@@ -83,14 +83,7 @@ getDatablockofMNbyPubkey: function(pubkey,callback){
         console.log("got object as return"+stdout);
 
         callback(stdout);
-      // for (var i = obj.length - 1; i >= 0; i--) {
 
-      //   if(obj[i].ip.includes(ip)){
-      //       // console.log("found MN in Apollon network");
-      //      callback( obj[i]);
-      //   return;
-      //   }
-      // }
 
      // callback(0)
       
